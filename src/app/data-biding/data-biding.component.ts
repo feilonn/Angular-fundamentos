@@ -12,6 +12,8 @@ export class DataBidingComponent implements OnInit {
   public num3: number = 7;
   public num4: number = 9;
 
+  public name: string = "Raul";
+
   public checkDisabled: boolean = true;
   public sourceImage: string = "https://img.portalgsti.com.br/9YEHBE1HnJlTShyyT-OmbFHD_7Q=/200x200/https://www.portalgsti.com.br/media/uploads/community/2016/04/25/angularjs.png"
 
