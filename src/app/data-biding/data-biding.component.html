@@ -7,3 +7,14 @@
 <button [disabled]="checkDisabled">Button</button>
 <img [src]="sourceImage">
 
+<br>
+<br>
+<hr>
+<button (click)="clickButton('Opa')">Alert!</button>
+
+<br>
+<br>
+
+<div (mouseover)="mudaDiv()" (mouseleave)="mudaDiv()" style="width: 250px; height: 250px; background-color: blue; color: white">
+</div>
+<p> {{ colorDiv }} </p>

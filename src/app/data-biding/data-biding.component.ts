@@ -17,6 +17,16 @@ export class DataBidingComponent implements OnInit {
 
   constructor() { }
 
+  public clickButton(param: string) {
+    alert(param);
+  }
+
+  public colorDiv: boolean = false;
+
+  public mudaDiv() {
+    this.colorDiv = !this.colorDiv;
+  }
+
   ngOnInit(): void {
   }
 
