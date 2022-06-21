@@ -1,0 +1,14 @@
+<p *ngIf="condition; else elseBlock">{{ condition }}</p>
+
+<ng-template #elseBlock>
+  <p>
+    {{ condition }}
+  </p>
+</ng-template>
+
+<hr>
+
+<p *ngIf="conditionClick">Verdadeiro</p>
+<p *ngIf="!conditionClick">Falso</p>
+
+<button (click)="onClickBool()">Click</button>
