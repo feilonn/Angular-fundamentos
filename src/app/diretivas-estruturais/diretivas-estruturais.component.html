@@ -12,3 +12,14 @@
 <p *ngIf="!conditionClick">Falso</p>
 
 <button (click)="onClickBool()">Click</button>
+
+<hr>
+
+<button (click)="pushList()">Click</button>
+
+<ul>
+  <li *ngFor="let item of pessoas; let i = index; first as isFirst; last as isLast" (click)="onClickList(i)">
+   {{i}} | {{item.nome}} - {{item.idade}} <span *ngIf="isFirst"> - Primeiro</span> <span *ngIf="isLast"> - Ultimo</span>
+  </li>
+</ul>
+
