@@ -23,3 +23,18 @@
   </li>
 </ul>
 
+<hr>
+
+<input [(ngModel)]="nome">
+<div [ngSwitch]="nome">
+  <p *ngSwitchCase="'Raul'">
+    Raul
+  </p>
+  <p *ngSwitchCase="'Teste 1'">
+    Teste 1
+  </p>
+  <p *ngSwitchDefault>
+    Default 
+  </p>
+</div>
+
