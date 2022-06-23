@@ -13,6 +13,7 @@ export class DiretivasAtributosComponent implements OnInit {
   public nome: string = "";
   public lista: Array<{ nome: string }> = [];
   public date:Date = new Date();
+  public birthday = new Date(1988, 3, 15);
 
   constructor() { }
 
