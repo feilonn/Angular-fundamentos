@@ -10,6 +10,8 @@ export class DiretivasAtributosComponent implements OnInit {
   public valor:boolean = true;
   public alturaPx: string = '20px';
   public bgColor: string = 'green';
+  public nome: string = "";
+  public lista: Array<{ nome: string }> = [];
 
   constructor() { }
 
@@ -24,6 +26,11 @@ export class DiretivasAtributosComponent implements OnInit {
         this.bgColor = 'green';
       }
     }, 2000)
+  }
+
+  public addLista() {
+    this.lista.push({ nome: this.nome })
+    this.nome = "";
   }
 
 }
