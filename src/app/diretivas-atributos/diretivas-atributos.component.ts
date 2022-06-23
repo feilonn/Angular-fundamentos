@@ -12,6 +12,7 @@ export class DiretivasAtributosComponent implements OnInit {
   public bgColor: string = 'green';
   public nome: string = "";
   public lista: Array<{ nome: string }> = [];
+  public date:Date = new Date();
 
   constructor() { }
 
