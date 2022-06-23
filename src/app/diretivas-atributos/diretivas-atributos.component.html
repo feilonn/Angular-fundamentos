@@ -1,3 +1,4 @@
+<ng-content select="h1"></ng-content>
 <div *ngIf="nome != 'teste'">
   <p [ngClass]="{'ativado':valor, 'desativado':!valor}">Teste</p>
   <p [ngStyle]="{'height':alturaPx, 'background':bgColor}">Style</p>
@@ -17,3 +18,4 @@
     {{ item.nome }}
   </p>
 </ng-template>
+<ng-content select="h3"></ng-content>
