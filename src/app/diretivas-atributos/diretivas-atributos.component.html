@@ -10,3 +10,10 @@
 <ul>
   <li *ngFor="let item of lista">{{ item.nome }}</li>
 </ul>
+
+<!-- Se a lista possuir conteudo, executa o ngFor -->
+<ng-template ngFor let-item [ngForOf]="lista">
+  <p>
+    {{ item.nome }}
+  </p>
+</ng-template>
