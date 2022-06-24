@@ -5,11 +5,16 @@ import { Component, OnInit} from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
 
+export class AppComponent {
+  public valor: number = 2;
   //É chamado quando o component é iniciado
-  // ngOnInit(): void {
-  //   alert("Olá");
-  // }
+  ngOnInit(): void {}
+
+  public add() {
+    this.valor += 1;
+  }
 
 }
+
+
