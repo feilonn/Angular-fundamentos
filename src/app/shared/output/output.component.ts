@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-output',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./output.component.scss']
 })
 export class OutputComponent implements OnInit {
+
+  @Output() public enviarDados = new EventEmitter();
 
   public list: Array<{ nome: string, idade: number}> = [
     {
@@ -28,7 +30,8 @@ export class OutputComponent implements OnInit {
   }
 
   public showData(index: number) {
-    console.log(this.list[index]);
+    // console.log(this.list[index]);
+    this.enviarDados.emit(this.list[index]);
   }
 
 }

@@ -17,4 +17,11 @@
 
 <hr>
 
-<app-output></app-output>
+<!-- Verifica se a variavel getDados é true para poder exibir o ng-template -->
+<ng-template [ngIf]="getDados">
+  <h1>{{ getDados.nome }}</h1>
+  <h2>{{ getDados.idade }}</h2>
+</ng-template>
+
+<!-- Captura o evento de output -->
+<app-output (enviarDados)="setDados($event)"></app-output>
