@@ -1,6 +1,5 @@
 <!-- <app-title teste="Mudou"></app-title>
 <app-data-biding></app-data-biding>
-<router-outlet></router-outlet>
 <app-diretivas-estruturais></app-diretivas-estruturais>
 <app-diretivas-atributos>
   <h1>Inicio</h1>
@@ -12,16 +11,19 @@
 </app-diretivas-atributos>
 <app-new-component></app-new-component> -->
 
-<app-input [num]="valor"></app-input>
+<!-- <app-input [num]="valor"></app-input>
 <button (click)="add()">add</button>
 
-<hr>
+<hr> -->
 
 <!-- Verifica se a variavel getDados é true para poder exibir o ng-template -->
-<ng-template [ngIf]="getDados">
+<!-- <ng-template [ngIf]="getDados">
   <h1>{{ getDados.nome }}</h1>
   <h2>{{ getDados.idade }}</h2>
-</ng-template>
+</ng-template> -->
 
 <!-- Captura o evento de output -->
-<app-output (enviarDados)="setDados($event)"></app-output>
+<!-- <app-output (enviarDados)="setDados($event)"></app-output> -->
+
+<app-food-list></app-food-list>
+<router-outlet></router-outlet>
