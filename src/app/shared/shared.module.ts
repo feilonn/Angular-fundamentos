@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http'
@@ -21,14 +22,15 @@ import { FoodAddComponent } from './food-add/food-add.component';
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports: [
     NewComponentComponent,
     InputComponent,
     OutputComponent,
     FoodListComponent,
-    FoodAddComponent
+    FoodAddComponent,
   ]
 })
 export class SharedModule { }

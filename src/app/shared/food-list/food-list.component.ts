@@ -11,7 +11,6 @@ import { FoodListService } from 'src/app/services/food-list.service';
 })
 export class FoodListComponent implements OnInit {
 
-  //Any para o caso de vir vazio
   public foodList: Array<FoodList> = [];
 
   //Injeção de dependencia
@@ -30,6 +29,20 @@ export class FoodListComponent implements OnInit {
       },
       error: (err: FoodList) => console.log(err),
     });
+
   }
 
+  public foodListDelete(id: number) {
+    return this.foodListService.deleteFoodListItem(id).subscribe({
+      next: res => this.foodList.splice(id - 1, 1),
+      error: error => console.log(error)
+    })
+  }
+
+  public foodListEdit(nome: string, id: number) {
+    return this.foodListService.editFoodListItem(nome, id).subscribe({
+      next: res => console.log(res),
+      error: error => error
+    })
+  }
 }
