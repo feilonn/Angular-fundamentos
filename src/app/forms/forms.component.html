@@ -1,0 +1,50 @@
+<form #form="ngForm" (ngSubmit)="enviarForm(form)">
+  <label for="nome">Nome: </label>
+  <input id="nome" type="text" name="nome" #nome="ngModel" [ngModel]="nome.value" ngModel required>
+  <span *ngIf="!nome.valid && (nome.touched && nome.dirty)">Input nome invalido!</span>
+
+  <br>
+  <br>
+  <label for="telefone">Telefone: </label>
+  <input type="phone" name="telefone" ngModel>
+
+  <br>
+  <br>
+  <label for="resposta">Sim: </label>
+  <input type="radio" name="resposta" value="Sim" ngModel>
+
+  <label for="resposta">Não: </label>
+  <input type="radio" name="resposta" value="Nao" ngModel>
+
+  <label for="resposta">Talvez: </label>
+  <input type="radio" name="resposta" value="Talvez" ngModel>
+
+  <br>
+  <br>
+  <label for="angular">Angular</label>
+  <input type="checkbox" name="angular" ngModel>
+
+  <br>
+  <br>
+  <label for="react">React</label>
+  <input type="checkbox" name="react" ngModel>
+
+  <br>
+  <br>
+  <label for="ejs">EJS</label>
+  <input type="checkbox" name="ejs" ngModel>
+
+  <br>
+  <br>
+  <select name="frutas" ngModel>
+    <option value="">Selecione uma opçao</option>
+    <option *ngFor="let item of frutasList" [ngValue]="item"> {{ item.nome }} - {{ item.preco }}</option>
+  </select>
+
+  <br>
+  <br>
+  <button type="submit" [disabled]="form.invalid">Enviar dados</button>
+</form>
+
+<br>
+{{ form.value | json }}
